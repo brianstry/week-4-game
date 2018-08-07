@@ -15,10 +15,12 @@ function nextRound(){
     if (currentNumber == numberToGuess){
         document.getElementById("win-lose").innerHTML = "You Win!";
         wins++;
+        document.getElementById("win-number").innerHTML = "Wins:  " + wins;
         game();
     } else if(currentNumber > numberToGuess){
         document.getElementById("win-lose").innerHTML = "You lose!";
-        loss++;
+        lose++;
+        document.getElementById("lose-number").innerHTML = "Lose:  " + lose;
         game();
     }
 }
